@@ -1,0 +1,21 @@
+// Inputs текстовые
+#{$block-text-field} { // .o-pltz-text-input
+    @include pltz-text-input;
+}
+
+// Валидные текстовые инпуты
+#{$block-form-group}.has-success {
+
+    #{$block-text-field} {
+        //color: $color-error;
+    }
+}
+
+// Невалидные текстовые инпуты
+#{$block-form-group}.has-error {
+
+    #{$block-text-field} {
+        color: $color-text-input-error;
+        border-color: $border-text-input-error;
+    }
+}

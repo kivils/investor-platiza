@@ -1,0 +1,15 @@
+.c-juri {
+    padding: $block-padding;
+    background: $bg-feat;
+
+    @media ($min-width-02) {
+        padding: $block-padding-large;
+    }
+
+    &__par {
+        font: 400 9px / 12px $font-default;
+        color: $color-base;
+        margin: 0;
+        padding: 0;
+    }
+}

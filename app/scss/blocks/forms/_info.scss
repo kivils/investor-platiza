@@ -1,0 +1,20 @@
+// Info
+.o-form-info {
+    font-family: $font-default;
+    font-size: $font-size-caption;
+    line-height: $line-height-caption;
+    color: $color-base;
+    padding: 4px 0 0;
+    display: none;
+    vertical-align: middle;
+
+    #{$block-form-group}.has-error & {
+        color: $text-color-error;
+        display: block;
+    }
+
+    &__text {
+        margin: 0;
+        padding: 0;
+    }
+}

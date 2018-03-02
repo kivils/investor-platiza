@@ -1,0 +1,217 @@
+// scss-lint:disable MergeableSelector
+// scss-lint:disable Shorthand
+.c-calculator {
+    padding: $block-padding;
+    padding-bottom: 0;
+
+    @media ($min-width-02) {
+        padding: $block-padding-large;
+        padding-bottom: 15px;
+    }
+
+    &__row {
+        box-sizing: border-box;
+
+        @media ($min-width-03) {
+            @include make-row(20px);
+        }
+
+        @media ($min-width-04) {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+    }
+
+    &__col4 {
+        box-sizing: border-box;
+
+        @media ($min-width-03) {
+            @include make-xs-column(4, 20px);
+        }
+
+        @media ($min-width-04) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    &__block {
+        margin-bottom: $mb-default;
+    }
+}
+
+.o-calc-label {
+    font: 300 16px / 19px $font-default;
+    color: $color-calc-label;
+    margin-bottom: 15px;
+    vertical-align: text-bottom;
+}
+
+.c-calc-slider {
+    position: relative;
+    background: $bg-calc-control;
+
+    &__line {
+        width: 100%;
+        display: table;
+    }
+
+    &__part {
+        width: 50%;
+        padding: 11px 15px;
+        display: table-cell;
+        vertical-align: middle;
+
+        box-sizing: border-box;
+
+        &_input {
+            font: 500 28px / 34px $font-default;
+            color: $color-calc-label;
+            width: 60%;
+        }
+
+        &_info {
+            font: 300 16px / 34px $font-default;
+            color: $color-calc-info;
+            width: 40%;
+            text-align: right;
+        }
+    }
+
+    &__slider {
+        width: 100%;
+        height: 4px;
+        background: $bg-calc;
+    }
+}
+
+// Calculator Radiobuttons
+.c-calc-radio-group {
+    overflow: hidden;
+}
+
+.c-calc-radio {
+    width: 50%;
+    position: relative;
+    float: left;
+    text-align: center;
+
+    &__control {
+        width: 1px;
+        height: 1px;
+        position: absolute;
+        top: auto;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px);
+        white-space: nowrap;
+    }
+
+    &__label {
+        font: 300 16px / 34px $font-default;
+        color: $color-calc-radio;
+        margin-left: 0;
+        padding: 11px 15px;
+        display: block;
+        position: relative;
+        pointer-events: auto;
+        cursor: pointer;
+        background: $bg-calc-control;
+        border-bottom: 4px solid $border-calc-radio;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -1px;
+            bottom: 0;
+            border-left: 1px solid $border-calc-radio;
+        }
+    }
+
+    &:first-child &__label {
+        border-left: 0;
+        border-radius: 4px 0 0 0;
+
+        &:before {
+            display: none;
+        }
+    }
+
+    &:last-child &__label {
+        border-radius: 0 4px 0 0;
+    }
+
+    &__control:checked + &__label {
+        font-weight: 500;
+        color: $color-calc-radio-active;
+        border-bottom-color: $border-calc-radio-active;
+
+        &:before {
+            left: 0;
+        }
+    }
+}
+
+
+// Calculator results
+.c-calc-table {
+    font-family: $font-default;
+    width: 100%;
+    display: table;
+
+    &.is-hidden {
+        display: none;
+    }
+
+    &__part {
+        color: $color-calc-label;
+        line-height: 34px;
+        padding: 10px 0 11px;
+        display: table-cell;
+        vertical-align: middle;
+        border-top: 1px solid $border-calc-radio;
+        border-bottom: 4px solid transparent;
+
+        &_info {
+            font-size: 16px;
+        }
+
+        &_sum {
+            font-family: $font-feat;
+            font-size: 28px;
+            font-weight: 700;
+            text-align: right;
+        }
+
+        &_sum span {
+            font-family: $font-default;
+            font-weight: 500;
+        }
+    }
+
+    &_feat {
+        min-height: 54px;
+        margin-bottom: 10px;
+
+        @media ($min-width-02) {
+            margin-bottom: 0;
+        }
+    }
+
+    &_feat &__part {
+        line-height: 39px;
+        padding: 0;
+        vertical-align: text-bottom;
+        border: 0;
+    }
+
+    &_feat &__part_info {
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    &_feat &__part_sum {
+        font-size: 36px;
+        color: $color-calc-active;
+    }
+}

@@ -1,0 +1,24 @@
+// UI variables and mixins
+@import './bower_components/jquery-ui-scss/assets/sass/variables';
+
+$ui-enable-rounded: true;
+
+// UI slider default
+$ui-slider-horizontal-height: 4px;
+$ui-slider-handle-size: 20;
+$ui-border-width: 0;
+
+$ui-slider-default-bg: #cfd8dc;
+$ui-slider-default-range-bg: #149b49;
+
+@import './bower_components/jquery-ui-scss/assets/sass/mixins';
+@import './bower_components/jquery-ui-scss/assets/sass/core/widgets';
+
+@import './bower_components/jquery-ui-scss/assets/sass/widgets/slider';
+
+
+// Bootstrap mixins
+@import './bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid-framework';
+@import './bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/clearfix';
+@import './bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables';
+@import './bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid';

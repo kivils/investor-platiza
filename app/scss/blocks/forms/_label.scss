@@ -1,0 +1,41 @@
+// Label
+.control-label {
+    font: $font-weight-light $font-size-label $font-default;
+    line-height: $line-height-label;
+    color: $color-label;
+    display: block;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+
+    position: absolute;
+    top: $top-label-focus;
+    left: $left-right-label-default;
+    right: $left-right-label-default;
+    z-index: 2;
+
+    transition-duration: .1s;
+    transition-property: top, font-size;
+    transition-timing-function: ease-in-out;
+    transform: translateZ(0);
+    will-change: top, font-size;
+    pointer-events: none;
+
+    #{$block-form-group}.is-empty & {
+        font-size: $font-size-label-focus;
+        top: $top-label-default;
+    }
+
+    #{$block-form-group}.is-empty.is-focused & {
+        font-size: $font-size-label;
+        top: $top-label-focus;
+    }
+
+    #{$block-text-field}:hover ~ &,
+    #{$block-textarea}:hover ~ & {
+        font-size: $font-size-label;
+        top: $top-label-focus;
+    }
+
+}
+

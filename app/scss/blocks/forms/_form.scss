@@ -1,0 +1,44 @@
+#{$block-form-group} { // .form-group
+    max-height: 99999px;
+    margin-bottom: $mb-default;
+    display: block;
+    position: relative;
+    opacity: 1;
+
+    transition: all 250ms ease;
+
+    // Иконка валидации
+    &:after {
+        content: '';
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: $top-label-default;
+        right: $left-right-label-default;
+        display: none;
+        background: transparent;
+    }
+
+    &.has-success:after {
+        display: block;
+        //background: $text-color-success;
+    }
+
+    &.has-error:after {
+        display: block;
+        //background: $bg-text-input-error;
+    }
+
+    &.is-hidden {
+        max-height: 0;
+        margin-bottom: 0;
+        opacity: 0;
+    }
+
+}
+
+#{$block-form-group}-error-mess {
+    font-size: $font-size-caption;
+    color: $text-color-error;
+    margin-bottom: $mb-default;
+}

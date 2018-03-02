@@ -1,0 +1,54 @@
+// Utility
+@import 'utility/vendors'; // Vendors mixins and variables
+@import 'utility/blockNames'; // BEM block names
+@import 'utility/variables'; // Variables
+@import 'utility/mixins'; // Mixins
+
+// Base
+@import 'base/base';
+
+// Headings
+@import 'blocks/headings';
+
+// Promo
+@import 'blocks/promo';
+
+// Calculator
+@import 'blocks/calculator';
+
+// Features
+@import 'blocks/features';
+
+// Why
+@import 'blocks/why';
+
+// Join
+@import 'blocks/join';
+
+// Stats
+@import 'blocks/stats';
+
+// About
+@import 'blocks/about';
+
+// Juri
+@import 'blocks/juri';
+
+// Footer
+@import 'blocks/footer';
+
+// To top
+@import 'blocks/totop';
+
+// Form Modal
+@import 'blocks/formModal';
+
+// Forms
+@import 'blocks/forms/buttons';
+@import 'blocks/forms/inputs';
+@import 'blocks/forms/form';
+@import 'blocks/forms/info';
+@import 'blocks/forms/label';
+
+// Slider
+@import 'blocks/uiSlider';

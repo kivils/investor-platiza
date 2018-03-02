@@ -1,0 +1,104 @@
+.c-features {
+    padding: $block-padding;
+    background: $bg-feat;
+
+    @media ($min-width-02) {
+        padding: $block-padding-large;
+    }
+
+    &__title {
+        color: $color-title2;
+    }
+
+    &__item {
+
+        @media ($min-width-02) {
+            width: 100%;
+            display: table;
+        }
+    }
+
+    &__item-part {
+        padding-top: 20px;
+
+        &_feat {
+            //text-align: center;
+            border-top: 1px solid $border-color-feat;
+        }
+
+        &_descr {
+            padding-bottom: 20px;
+        }
+
+        @media ($min-width-02) {
+            display: table-cell;
+            vertical-align: middle;
+
+            &_feat {
+                width: 25%;
+                padding-bottom: 20px;
+                text-align: left;
+            }
+
+            &_descr {
+                width: 75%;
+                padding-left: 10px;
+                border-top: 1px solid $border-color-feat;
+            }
+        }
+    }
+
+    &__item:first-of-type &__item-part {
+        padding-top: 10px;
+        border: 0;
+    }
+
+    &__item:last-of-type &__item-part_feat {
+
+        @media ($min-width-02) {
+            padding-bottom: 0;
+        }
+    }
+
+    &__item:last-of-type &__item-part_descr {
+        padding-bottom: 0;
+    }
+
+    &__item-icon {
+        margin-right: 30px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &__item-title {
+        font: 300 28px / 33px $font-default;
+        color: $text-color-success;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+    }
+
+    &__list-item {
+        font: 300 16px / 24px $font-default;
+        color: $color-features;
+        margin: 0;
+        padding: 0 0 0 20px;
+        list-style: none;
+        position: relative;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:before {
+            content: '—';
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}

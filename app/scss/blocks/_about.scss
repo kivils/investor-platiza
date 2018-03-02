@@ -1,0 +1,18 @@
+.c-about {
+    padding: $block-padding;
+
+    @media ($min-width-02) {
+        padding: $block-padding-large;
+    }
+
+    &__par {
+        font: 400 16px / 24px $font-default;
+        color: $color-base;
+        margin: 0 0 20px;
+        padding: 0;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}

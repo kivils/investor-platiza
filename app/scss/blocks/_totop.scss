@@ -1,0 +1,83 @@
+// Ссылка Наверх
+
+.o-totop {
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: -100px;
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    opacity: 0;
+    transition: margin 1s;
+    z-index: $zindex-totop;
+
+    &.is-visible {
+        opacity: 1;
+        margin-bottom: 20px;
+    }
+
+    &.is-clicked.is-visible {
+        display: none;
+    }
+
+    &__pic {
+        width: 48px;
+        height: 48px;
+        line-height: 48px;
+        margin-bottom: 4px;
+        display: block;
+        position: relative;
+
+        &:before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: .1;
+            border-radius: 50%;
+            background: $bg-black;
+        }
+    }
+
+    &__icon {
+        position: relative;
+    }
+
+    &__icon-fill {
+        fill: $bg-site;
+    }
+
+    &__text {
+        font: 400 10px / 1 $font-default;
+        text-transform: lowercase;
+        color: $color-lite-grey;
+        display: block;
+    }
+
+    &:hover {
+
+        #{$block-icon-totop}__pic:before {
+            opacity: 1;
+            background: $bg-colored;
+        }
+
+        #{$block-icon-totop}__text {
+            color: $text-color-success;
+        }
+    }
+
+    &:active:hover {
+
+        #{$block-icon-totop}__pic:before {
+            opacity: .9;
+            background: $text-color-success;
+        }
+
+        #{$block-icon-totop}__text {
+            color: $text-color-success;
+        }
+    }
+}

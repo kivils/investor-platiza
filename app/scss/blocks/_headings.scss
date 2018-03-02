@@ -1,0 +1,25 @@
+.o-pltz-h1 {
+    font: 500 20px / 24px $font-default;
+    color: $color-title1;
+    margin: 0 0 20px;
+    padding: 0;
+
+    @media ($min-width-02) {
+        font: 500 28px / 33px $font-default;
+    }
+}
+
+.o-pltz-h2 {
+    font: 500 20px / 24px $font-default;
+    color: $color-title1;
+    margin: 0 0 20px;
+    padding: 0;
+
+    @media ($min-width-02) {
+        font: 500 28px / 33px $font-default;
+    }
+
+    &_error {
+        color: $text-color-error;
+    }
+}

@@ -1,0 +1,72 @@
+.c-promo {
+    padding: $block-padding;
+    position: relative;
+    background: $bg-promo url(../images/bg_investors.png) no-repeat 50% 55%;
+    background-size: cover;
+
+    box-sizing: border-box;
+
+    @media ($min-width-02) {
+        min-height: 300px;
+        padding: $block-padding-large;
+        padding-top: 30px;
+    }
+
+    &:after {
+        content: '';
+        top: 100%;
+        left: 50%;
+        height: 0;
+        width: 0;
+        margin-left: -15px;
+        position: absolute;
+        pointer-events: none;
+        border: 15px solid transparent;
+        border-top-color: $bg-promo;
+    }
+
+    &__logo {
+        margin-bottom: 20px;
+    }
+
+    &__logo-link {
+        text-decoration: none;
+        display: inline-block;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        &:focus {
+            text-decoration: none;
+            outline-color: $text-color-success;
+            background: $bg-colored-transp;
+        }
+
+        &:active {
+            text-decoration: none;
+        }
+    }
+
+    &__text {
+        font: 400 32px / 40px $font-feat;
+        color: $color-feat;
+        margin-bottom: 20px;
+        text-align: left;
+
+        @media ($min-width-02) {
+            font: 400 48px / 58px $font-feat;
+            text-align: center;
+        }
+    }
+
+    &__text-feat {
+        font-weight: 700;
+    }
+}
+
+.c-logo {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}

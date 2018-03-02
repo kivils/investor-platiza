@@ -1,0 +1,16 @@
+linters:
+  Indentation:
+    width: 4
+
+  PropertySortOrder:
+    enabled: false
+
+  PseudoElement:
+    enabled: false
+
+  UrlQuotes:
+    enabled: false
+
+  SelectorFormat:
+      enabled: true
+      convention: ^[a-z0-9]+(((-{1})?[a-z0-9]+){0,2})+((_{2})?[a-z0-9]+)?+((-{1})?[a-z0-9]+)?+((_{1})?[a-z0-9]+)?+((-{1})?[a-z0-9]+)?+$ # or 'strict_BEM', or 'hyphenated_lowercase', or 'hyphenated_BEM', or 'snake_case', or 'camel_case', or a regex pattern

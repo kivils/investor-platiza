@@ -1,0 +1,112 @@
+// scss-lint:disable MergeableSelector
+#{$block-button} { // .o-pltz-btn
+    font: 400 16px / 1 $font-default;
+    color: $button-color-default;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: $button-paddings-default;
+    display: inline-block;
+    outline: none;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid $button-bg-default;
+    border-radius: $border-radius-default;
+    background: $button-bg-default;
+
+    box-sizing: border-box;
+    user-select: none;
+    //white-space: nowrap;
+
+    &:hover {
+        border-color: $button-bg-hover;
+        background: $button-bg-hover;
+    }
+
+    &:focus {
+        border-color: $button-bg-focus;
+        background: $button-bg-focus;
+    }
+
+    &:active {
+        border-color: $button-bg-active;
+        background: $button-bg-active;
+    }
+
+    &:disabled,
+    &[aria-disabled=true] {
+        cursor: not-allowed;
+        pointer-events: none;
+        opacity: $button-opacity-disabled;
+    }
+
+    &::-moz-focus-inner {
+        border: 0;
+    }
+
+    &_full {
+        width: 100%;
+    }
+}
+
+// Зеленые кнопки
+#{$block-button} {
+
+    &_t1 {
+        @include pltz-btn-type1;
+    }
+
+    &_t1-full {
+        @include pltz-btn-type1;
+
+        width: 100%;
+    }
+
+}
+
+// Белые кнопки с зеленым бордером
+#{$block-button} {
+
+    &_t2 {
+        @include pltz-btn-type2;
+    }
+
+    &_t2-full {
+        @include pltz-btn-type2;
+
+        width: 100%;
+    }
+
+}
+
+// Прозрачные кнопки с белым бордером
+#{$block-button} {
+
+    &_t3 {
+        @include pltz-btn-type3;
+    }
+
+    &_t3-full {
+        @include pltz-btn-type3;
+
+        width: 100%;
+    }
+
+}
+
+// Кнопки с пунктирной границей, белый цвет, <br>при наведении - белый фон
+#{$block-button} {
+
+    &_dashed-bg {
+        @include pltz-btn-dashed-bg;
+
+        font-family: $font-feat;
+        font-size: $pltz-btn-font-size-dashed-bg;
+        line-height: $pltz-btn-line-height-dashed-bg;
+        font-weight: 700;
+        text-transform: inherit;
+        padding: $pltz-btn-paddings-dashed-bg;
+    }
+
+}

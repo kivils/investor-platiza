@@ -1,0 +1,238 @@
+// scss-lint:disable VendorPrefix
+// Mixins for bootstrap-sass
+//
+@mixin pltz-container {
+    width: $container-width-01;
+
+    @media ($min-width-02) {
+        width: $container-width-02;
+    }
+
+    @media ($min-width-03) {
+        width: $container-width-03;
+    }
+
+    @media ($min-width-04) {
+        width: $container-width-04;
+    }
+
+    min-width: 320px;
+}
+
+@mixin pltz-hidden-xs {
+    @media ($max-width-02) {
+        display: none;
+    }
+}
+
+@mixin pltz-visible-xs {
+    display: none;
+
+    @media ($max-width-02) {
+        display: block;
+    }
+}
+
+@mixin pltz-hidden-sm {
+    @media ($min-width-02) and ($max-width-03) {
+        display: none;
+    }
+}
+
+@mixin pltz-visible-sm {
+    display: none;
+
+    @media ($min-width-02) and ($max-width-03) {
+        display: block;
+    }
+}
+
+// Standard cols
+@mixin pltz-grid-cols($gap) {
+    $i: 1;
+
+    @while $i <= 12 {
+
+        &-#{$i} {
+            margin-bottom: 10px;
+            box-sizing: border-box;
+
+            @media ($min-width-02) {
+                @include make-xs-column($i, $gap * 2);
+
+                margin-bottom: 0;
+            }
+        }
+
+        $i: $i + 1;
+    }
+}
+
+//
+// Text inputs and textarea
+@mixin pltz-text-input {
+    font-family: $font-default;
+    font-size: $font-size-input;
+    font-weight: 400;
+    color: $color-text-input;
+    width: 100%;
+    min-height: 64px;
+    line-height: $line-height-input;
+    margin: 0;
+    padding: $padding-input;
+    display: block;
+    position: relative;
+    border-radius: $border-radius-default;
+    background-color: $bg-text-input;
+    background-image: none;
+    border: 1px solid $border-text-input;
+    box-shadow: none;
+    box-sizing: border-box;
+    z-index: 3;
+
+    &:hover {
+        color: $color-text-input-hover;
+        outline: none;
+        border-color: $border-text-input-hover;
+        background-color: $bg-text-input-hover;
+    }
+
+    &:focus {
+        color: $color-text-input-focus;
+        outline: none;
+        border-color: $border-text-input-focus;
+        background-color: $bg-text-input-focus;
+    }
+
+    &:active {
+        color: $color-text-input-active;
+        outline: none;
+        border-color: $border-text-input-active;
+        background-color: $bg-text-input-active;
+    }
+
+    &:disabled {
+        color: $color-text-input-disabled;
+        //opacity: .5;
+        border-color: $border-text-input-disabled;
+        background-color: $bg-text-input-disabled;
+    }
+
+    &::-moz-placeholder {
+        color: $color-lite-grey;
+    }
+
+    &::-webkit-input-placeholder {
+        color: $color-lite-grey;
+    }
+
+    &:-ms-input-placeholder {
+        color: $color-lite-grey;
+    }
+
+    &::-ms-clear {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+
+}
+
+
+// Buttons
+//
+// Type1
+@mixin pltz-btn-type1 {
+    border-color: $button-bg-type1;
+    background: $button-bg-type1;
+
+    &:hover {
+        border-color: $button-bg-type1-hover;
+        background: $button-bg-type1-hover;
+    }
+
+    &:focus {
+        border-color: $button-bg-type1-focus;
+        background: $button-bg-type1-focus;
+    }
+
+    &:active {
+        border-color: $button-bg-type1-active;
+        background: $button-bg-type1-active;
+    }
+}
+
+// Type2
+@mixin pltz-btn-type2 {
+    color: $button-color-type2;
+    padding: $button-paddings-type2;
+    border-color: $button-border-color-type2;
+    background: $button-bg-type2;
+
+    &:hover {
+        color: $button-color-type2-hover;
+        border-color: $button-border-color-type2-hover;
+        background: $button-bg-type2-hover;
+    }
+
+    &:focus {
+        color: $button-color-type2-focus;
+        border-color: $button-border-color-type2-focus;
+        background: $button-bg-type2-focus;
+    }
+
+    &:active {
+        color: $button-color-type2-active;
+        border-color: $button-border-color-type2-active;
+        background: $button-bg-type2-active;
+    }
+}
+
+// Type3
+@mixin pltz-btn-type3 {
+    color: $button-color-type3;
+    border-color: $button-border-color-type3;
+    background: $button-bg-type3;
+
+    &:hover {
+        color: $button-color-type3-hover;
+        border-color: $button-border-color-type3-hover;
+        background: $button-bg-type3-hover;
+    }
+
+    &:focus {
+        color: $button-color-type3-focus;
+        border-color: $button-border-color-type3-focus;
+        background: $button-bg-type3-focus;
+    }
+
+    &:active {
+        color: $button-color-type3-active;
+        border-color: $button-border-color-type3-active;
+        background: $button-bg-type3-active;
+    }
+}
+
+// Border Dashed White
+@mixin pltz-btn-dashed-bg {
+    border: 1px dashed $button-color-dashed-bg;
+    border-radius: $pltz-btn-radius-dashed-bg;
+    background: $button-bg-dashed-bg;
+
+    transition: all 250ms ease-out;
+
+    &:hover {
+        color: $button-color-dashed-bg-hover;
+        background: $button-bg-dashed-bg-hover;
+    }
+
+    &:focus {
+        color: $button-color-dashed-bg-hover;
+        background: $button-bg-dashed-bg-hover;
+    }
+
+    &:active {
+        color: $button-color-dashed-bg-hover;
+        background: $button-bg-dashed-bg-hover;
+    }
+}

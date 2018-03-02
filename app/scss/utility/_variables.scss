@@ -1,0 +1,233 @@
+// Typography
+$font-default: Roboto, Arial, sans-serif;
+$font-feat: 'PT Sans', Arial, sans-serif;
+
+//
+$font-size-default: 14px;
+$line-height-default: 20px;
+
+$font-size-caption: 12px;
+$line-height-caption: 16px;
+
+$font-size-head1: 26px;
+$line-height-head1: 30px;
+
+$font-size-head2: 18px;
+$line-height-head2: 24px;
+
+$font-size-head3: 16px;
+$line-height-head3: 22px;
+
+//
+$font-weight-default: 400;
+$font-weight-light: 300;
+$font-weight-bold: 700;
+
+// Colors
+$color-base: #607d8b;
+$text-color-success: #149b49;
+$text-color-error: #e91e63;
+$color-link-base: #149b49;
+$color-feat: #fff;
+$color-lite-grey: #999;
+
+$color-features: #455a64;
+
+$color-title1: #455a64;
+$color-title2: #263238;
+
+// Backgrounds
+$bg-base: #f4f5f7;
+$bg-site: #fff;
+$bg-footer: #6c6d6a;
+$bg-feat: #f4f5f7;
+$bg-colored: #149b49;
+$bg-colored-transp: rgba(20, 155, 73, .3);
+$bg-tap: rgba(0, 0, 0, 0);
+$bg-promo: #59595a;
+$bg-modal: rgba(0, 0, 0, .6);
+$bg-black: #000;
+
+//
+$mb-default: 20px;
+
+//
+$block-padding: 20px 15px;
+$block-padding-large: 40px 30px;
+
+//
+$zindex-totop: 6;
+
+// Dimensions
+$container-width-01: 100%;
+$container-width-02: 750px;
+$container-width-03: 960px;
+$container-width-04: 1200px;
+
+// Breakpoints
+$breakpoint-01: 600px;
+$breakpoint-02: 768px;
+$breakpoint-03: 992px;
+$breakpoint-04: 1280px;
+
+// @media
+$min-height-01: 'min-height: $breakpoint-01';
+$min-height-02: 'min-height: $breakpoint-02';
+$min-height-03: 'min-height: $breakpoint-03';
+$min-height-04: 'min-height: $breakpoint-04';
+
+$min-width-01: 'min-width: $breakpoint-01';
+$min-width-02: 'min-width: $breakpoint-02';
+$min-width-03: 'min-width: $breakpoint-03';
+$min-width-04: 'min-width: $breakpoint-04';
+
+$max-height-02: 'max-height: $breakpoint-02 - 1';
+$max-height-03: 'max-height: $breakpoint-03 - 1';
+$max-height-04: 'max-height: $breakpoint-04 - 1';
+
+$max-width-02: 'max-width: $breakpoint-02 - 1';
+$max-width-03: 'max-width: $breakpoint-03 - 1';
+$max-width-04: 'max-width: $breakpoint-04 - 1';
+
+
+// Calculator
+$color-calc-label: #455a64;
+$color-calc-info: #90a4ae;
+$color-calc-active: #149b49;
+$bg-calc-control: rgba(38, 50, 56, .04);
+$bg-calc: #cfd8dc;
+$bg-calc-active: #149b49;
+$color-calc-radio: #607d8b;
+$color-calc-radio-active: #455a64;
+$border-calc-radio: #cfd8dc;
+$border-calc-radio-active: #149b49;
+
+// Features
+$border-color-feat: #d8d8d8;
+
+// Forms
+//
+$padding-input: 24px 56px 10px 16px;
+
+//
+$border-radius-default: 4px;
+
+// Legend
+$color-legend: #455a64;
+
+// Text inputs
+$font-size-input: 18px;
+$line-height-input: 28px;
+
+//
+$color-text-input: #455a64;
+$color-text-input-hover: $color-text-input;
+$color-text-input-focus: $color-text-input;
+$color-text-input-active: $color-text-input;
+$color-text-input-disabled: #90a4ae;
+$color-text-input-error: $text-color-error;
+
+//
+$bg-text-input: rgba(38, 50, 56, .04);
+$bg-text-input-hover: $bg-text-input;
+$bg-text-input-focus: rgba(255, 255, 255, .04);
+$bg-text-input-active: rgba(255, 255, 255, .04);
+$bg-text-input-disabled: $bg-text-input;
+$bg-text-input-error: rgba(255, 255, 255, .04);
+
+//
+$border-text-input: transparent;
+$border-text-input-hover: #cfd8dc;
+$border-text-input-focus: #cfd8dc;
+$border-text-input-active: #cfd8dc;
+$border-text-input-disabled: #cfd8dc;
+$border-text-input-success: transparent;
+$border-text-input-error: $text-color-error;
+
+
+// Hints (Labels)
+$font-size-label: 12px;
+$font-size-label-focus: 18px;
+
+//
+$line-height-label: 22px;
+
+//
+$color-label: #607d8b;
+$color-label-error: $text-color-error;
+
+//
+$top-label-default: 20px;
+$top-label-focus: 8px;
+$left-right-label-default: 16px;
+
+
+// Buttons
+$button-font-size-default: 16px;
+$button-line-height-default: 16px;
+$button-font-weight-default: 400;
+
+$button-color-default: #fff;
+
+$button-paddings-default: 20px 16px;
+
+//
+$button-bg-default: #cfd8dc;
+$button-bg-hover: #90a4ae;
+$button-bg-focus: #607d8b;
+$button-bg-active: #607d8b;
+
+//
+$button-opacity-disabled: .65;
+
+//
+$button-bg-type1: #4caf50;
+$button-bg-type1-hover: #388e3c;
+$button-bg-type1-focus: #1b5e20;
+$button-bg-type1-active: #1b5e20;
+
+//
+$button-paddings-type2: 14px 30px;
+$button-color-type2: #149b49;
+$button-color-type2-hover: #fff;
+$button-color-type2-focus: #fff;
+$button-color-type2-active: #fff;
+
+$button-bg-type2: #fff;
+$button-bg-type2-hover: #149b49;
+$button-bg-type2-focus: #2e7d32;
+$button-bg-type2-active: #2e7d32;
+
+$button-border-color-type2: #149b49;
+$button-border-color-type2-hover: #149b49;
+$button-border-color-type2-focus: #2e7d32;
+$button-border-color-type2-active: #2e7d32;
+
+//
+$button-color-type3: #fff;
+$button-color-type3-hover: #149b49;
+$button-color-type3-focus: #149b49;
+$button-color-type3-active: #149b49;
+
+$button-border-color-type3: #fff;
+$button-border-color-type3-hover: #fff;
+$button-border-color-type3-focus: #f4f5f7;
+$button-border-color-type3-active: #f4f5f7;
+
+$button-bg-type3: transparent;
+$button-bg-type3-hover: #fff;
+$button-bg-type3-focus: #f4f5f7;
+$button-bg-type3-active: #f4f5f7;
+
+//
+$pltz-btn-radius-dashed-bg: 6px;
+
+$button-color-dashed-bg: #fff;
+$button-color-dashed-bg-hover: #6c6d6a;
+
+$button-bg-dashed-bg: transparent;
+$button-bg-dashed-bg-hover: #fff;
+
+$pltz-btn-font-size-dashed-bg: 14px;
+$pltz-btn-line-height-dashed-bg: 12px;
+$pltz-btn-paddings-dashed-bg: 11px 18px;

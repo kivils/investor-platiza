@@ -1,0 +1,24 @@
+.c-join {
+    padding: $block-padding;
+    text-align: center;
+    background: $bg-colored;
+
+    @media ($min-width-02) {
+        padding: $block-padding-large;
+    }
+
+    &__title {
+        color: $color-feat;
+    }
+
+    &__par {
+        font: 400 16px / 20px $font-default;
+        color: $color-feat;
+        margin: 0 0 30px;
+        padding: 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
