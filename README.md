@@ -1,14 +1,5 @@
 # Лэндинг для инвесторов Platiza
 
-## Переменные для задания параметров инвестирования - срок, сумма, проценты
-
-- **app/config/config.php** - задаются переменные, которые используются в процессе разработки
-
-- **dist/config/config.php** - компиллируется из /app при сборке
-
-- **config/config.php** - На сервере используется свой файл, в котором задаются параметры отправки формы на почту для PHPMailer
-
-
 ## Требования к рабочей среде
 
 - **Nodejs + npm** - установленный глобально [https://nodejs.org/en/](https://nodejs.org/en/)
@@ -121,7 +112,6 @@ $ npm run dev
 ```bash
 $ gulp serve
 ```
-**_В PhpStorm есть вкладка Gulp [https://gyazo.com/25dbce6b3e2333c7c1af7a52083d4995](https://gyazo.com/25dbce6b3e2333c7c1af7a52083d4995) - можно запускать задачи оттуда_**
 
 - Компиллирует css из scss. Основной scss-файл = app/scss/main.scss
 - Складывает файлы стилей в папку **app/css**
@@ -131,7 +121,7 @@ $ gulp serve
 
 - Запускает локальный сервер, **hostnameTest** _(см. gulp-vars.js)_
 
-- Отслеживает изменения в файлах php, scss, js, images, fonts из папки **sourcePath = "app"** _(см. gulp-vars.js)_ - компиллирует css и js, автоматически перезагружает браузер
+- Отслеживает изменения в файлах html, scss, js, images, fonts из папки **sourcePath = "app"** _(см. gulp-vars.js)_ - компиллирует css и js, автоматически перезагружает браузер
 
 - Сайт будет доступен на любом устройстве в пределах сети (в том числе мобильные девайсы)
 
@@ -149,7 +139,7 @@ $ gulp build
 
 - Компилляция js из js-модулей (browserify)
 
-- Минификация файлов - вендорные css (bower_components), вендорные js (bower_components), php
+- Минификация файлов - вендорные css (bower_components), вендорные js (bower_components), html
 
 - Обработка (минификация) images
 
